@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<script src="./JSSphere.js"></script>
+	<link rel="stylesheet" type="text/css" href="./JSSphere.css">
+	<style>
+		body {
+			text-align: center;
+		}
+		.sphere {
+			margin: 0 auto;
+		}
+	</style>
+	<title>JSSphere Examples</title>
+</head>
+<body>
+	<h1>JSSphere Examples</h1>
+	<section>
+		<h2>Earth</h2>
+		<div class="earth"></div>
+		<script>
+			new Sphere({
+				element: document.getElementsByClassName("earth")[0],
+				radius: 150,
+				polygonsPerMeridian: 13,
+				texture: "https://cdn.thinglink.me/api/image/743786736932356097/1240/10/scaletowidth",
+				rotate: true,
+				rotationTime: 10,
+			});
+		</script>
+	</section>
+	<section>
+		<h2>Mars</h2>
+		<div class="mars"></div>
+		<script>
+			new Sphere({
+				element: document.getElementsByClassName("mars")[0],
+				radius: 50,
+				polygonsPerMeridian: 13,
+				texture: "https://static-2.gumroad.com/res/gumroad/5387571460549/asset_previews/b455aaa72d1482e171f0558c2766cd48/retina/Mars_2k_Color_Preview_v001.jpg",
+				rotate: true,
+				rotationTime: 20,
+			});
+		</script>
+	</section>
+	<section>
+		<h2>Moon</h2>
+		<div class="moon"></div>
+		<script>
+			new Sphere({
+				element: document.getElementsByClassName("moon")[0],
+				radius: 30,
+				polygonsPerMeridian: 13,
+				texture: "https://static-2.gumroad.com/res/gumroad/5387571460549/asset_previews/d7c3b214de778aa83aa0a0ab32eec4c1/retina/Moon_2k_Preview.jpg",
+				rotate: true,
+				rotationTime: 5,
+			});
+		</script>
+	</section>
+</body>
+</html>
