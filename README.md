@@ -2,10 +2,11 @@
 Plugin for rendering 3D spheres and planets on JS, CSS and HTML
 
 ### Usage
-1. Include the js-file into your project:
+
+1. Include the js and css files into your project:
 ```
-<script type="text/javascript" src="JSSphere.js"></script>
-<link rel="stylesheet" type="text/css" href="JSSphere.css">
+<script type="text/javascript" src="JSSphere.min.js"></script>
+<link rel="stylesheet" type="text/css" href="JSSphere.min.css">
 ```
 2. Call `new Sphere()` with the necessary parameters:
 ```
@@ -19,3 +20,14 @@ new Sphere({
 });
 ```
 3. Nailed it!
+
+### Method
+
+Now JSSphere has only one method `setTexture("https://example.com/moon.jpg")`. With this you can simply change the texture of existing sphere without rendering it again. The texture will change smoothly.
+```
+let planet = new Sphere({
+ texture: "https://example.com/earth.jpg"
+});
+
+planet.setTexture("https://example.com/moon.jpg");
+```
