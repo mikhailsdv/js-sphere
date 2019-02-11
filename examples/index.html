@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<script type="text/javascript" src="JSSphere.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="JSSphere.min.css">
+	<style>
+		body {
+			text-align: center;
+			font-family: "Arial";
+			padding: 10px;
+		}
+		section > .planets {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			margin: 0 auto;
+			max-width: 768px;
+			padding: 10px;
+		}
+		section > .planets > div {
+			padding: 10px;
+		}
+	</style>
+	<title>JSSphere Examples</title>
+</head>
+<body>
+	<h1>JSSphere Examples</h1>
+	<section>
+		<div class="planets">
+			<div id="Earth">
+				<h3>Earth</h3>
+				<script>
+					new Sphere({
+						element: document.getElementById("Earth"),
+						radius: 150,
+						polygonsPerMeridian: 13,
+						texture: "https://cdn.thinglink.me/api/image/743786736932356097/1240/10/scaletowidth",
+						rotate: true,
+						rotationTime: 10,
+					});
+				</script>
+			</div>
+			<div id="Mars">
+				<h3>Mars</h3>
+				<script>
+					new Sphere({
+						element: document.getElementById("Mars"),
+						radius: 50,
+						polygonsPerMeridian: 13,
+						texture: "https://static-2.gumroad.com/res/gumroad/5387571460549/asset_previews/b455aaa72d1482e171f0558c2766cd48/retina/Mars_2k_Color_Preview_v001.jpg",
+						rotate: true,
+						rotationTime: 20,
+					});
+				</script>
+			</div>
+			<div id="Moon">
+				<h3>Moon</h3>
+				<script>
+					new Sphere({
+						element: document.getElementById("Moon"),
+						radius: 30,
+						polygonsPerMeridian: 13,
+						texture: "https://static-2.gumroad.com/res/gumroad/5387571460549/asset_previews/d7c3b214de778aa83aa0a0ab32eec4c1/retina/Moon_2k_Preview.jpg",
+						rotate: true,
+						rotationTime: 5,
+					});
+				</script>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
