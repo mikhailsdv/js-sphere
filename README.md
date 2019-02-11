@@ -1,8 +1,13 @@
 # JSSphere
 Plugin for rendering 3D spheres and planets on JS, CSS and HTML
 
-### Example using JSSphere
-
+### Usage
+1. Include the js-file into your project:
+```
+ <script type="text/javascript" src="JSSphere.js"></script>
+	<link rel="stylesheet" type="text/css" href="JSSphere.css">
+```
+2. Call `new Sphere()` with the necessary parameters:
 ```
 new Sphere({
  element: document.body,                     // where the sphere should be rendered
@@ -13,4 +18,4 @@ new Sphere({
  rotationTime: 10,                           // time of a turn, seconds
 });
 ```
-That's it!
+3. Nailed it!
