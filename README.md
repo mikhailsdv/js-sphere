@@ -23,7 +23,7 @@ new Sphere({
 
 ### Method
 
-Now JSSphere has only one method `setTexture("https://example.com/moon.jpg")`. With this you can simply change the texture of existing sphere without rendering it again. The texture will change smoothly.
+Now JSSphere has only one method `.setTexture(url)`. With this you can simply change the texture of existing sphere without rendering it again. The texture will change smoothly.
 ```
 let planet = new Sphere({
  texture: "https://example.com/earth.jpg"
