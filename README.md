@@ -1,5 +1,5 @@
 # JSSphere
-Plugin for rendering 3D spheres and planets on JS, CSS and HTML
+Tiny JavaScript library for creating animated 3D spheres and planets.
 
 ### Usage
 
@@ -23,7 +23,7 @@ new Sphere({
 
 ### Method
 
-Now JSSphere has only one method `.setTexture(url)`. With this you can simply change the texture of existing sphere without rendering it again. The texture will change smoothly.
+Now JSSphere has only one method `.setTexture(url)`. With this you can smoothly change the texture of existing sphere without rerendering it.
 ```
 let planet = new Sphere({
  texture: "https://example.com/earth.jpg"
