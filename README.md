@@ -1,4 +1,4 @@
-# JSSphere
+# js-sphere
 Tiny JavaScript library for creating animated 3D spheres and planets.
 
 ### Usage
