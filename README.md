@@ -1,29 +1,28 @@
 # js-sphere
-Tiny JavaScript library for creating animated 3D spheres and planets.
+Tiny JavaScript library for creating animated 3D spheres / planets with divs (no canvas).
 
 ### Usage
 
-1. Include the js and css files into your project:
+1. Include the js file into your project:
 ```
-<script type="text/javascript" src="JSSphere.min.js"></script>
-<link rel="stylesheet" type="text/css" href="JSSphere.min.css">
+<script type="text/javascript" src="js-sphere.js"></script>
 ```
 2. Call `new Sphere()` with the necessary parameters:
 ```
 new Sphere({
- element: document.body,                     // where the sphere should be rendered
+ container: document.body,                   // where the sphere should be rendered
  radius: 150,                                // radius of the sphere, px
  polygonsPerMeridian: 13,                    // amount of polygons per meridian (180 deg)
  texture: "https://example.com/earth.jpg",   // texture
- rotate: true,                               // should rotate?
- rotationTime: 10,                           // time of a turn, seconds
+ keyframes: "rotate",                        // name of css kayframes of rotation
+ rotate: true,                               // should keyframes be applied?
+ rotationTime: 1000,                         // time of a single turn, milliseconds 
 });
 ```
-3. Nailed it!
 
-### Method
+### Methods
 
-Now JSSphere has only one method `.setTexture(url)`. With this you can smoothly change the texture of existing sphere without rerendering it.
+`js-sphere` has only one method `.setTexture(url)`. It allows you to smoothly change the texture of existing sphere without rerendering it.
 ```
 let planet = new Sphere({
  texture: "https://example.com/earth.jpg"
