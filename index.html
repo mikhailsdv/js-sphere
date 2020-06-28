@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+	<script type="text/javascript" src="js-sphere.js"></script>
+
+	<title>js-sphere examples</title>
+
+	<style type="text/css">
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: Arial;
+		}
+
+		body > * {
+			margin-bottom: 40px;
+		}
+
+		@keyframes earth {
+			from {
+				transform: rotate3d(1, 1, 0, 0deg);
+			}
+			to {
+				transform: rotate3d(1, 1, 0, 360deg);
+			}
+		}
+
+		@keyframes mars {
+			from {
+				transform: rotate3d(1, 1, 0, 0deg);
+			}
+			to {
+				transform: rotate3d(1, 0, 0, 360deg);
+			}
+		}
+
+		@keyframes moon {
+			from {
+				transform: rotate3d(0, 1, 1, 0deg);
+			}
+			to {
+				transform: rotate3d(0, 1, 1, 360deg);
+			}
+		}
+
+		@keyframes jupiter {
+			from {
+				transform: rotate3d(0, 1, 0, 0deg);
+			}
+			to {
+				transform: rotate3d(0, 1, 0, 360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>js-sphere examples</h1>
+
+	<div class="sphere" id="earth"></div>
+	<div class="sphere" id="mars"></div>
+	<div class="sphere" id="moon"></div>
+	<div class="sphere" id="jupiter"></div>
+
+	<script>
+		new Sphere({
+			container: document.getElementById("earth"),
+			radius: 150,
+			polygonsPerMeridian: 15,
+			texture: "https://cdn.thinglink.me/api/image/743786736932356097/1240/10/scaletowidth",
+			rotate: true,
+			rotationTime: 10000,
+			keyframes: "earth"
+		});
+
+		new Sphere({
+			container: document.getElementById("mars"),
+			radius: 100,
+			polygonsPerMeridian: 13,
+			texture: "https://static-2.gumroad.com/res/gumroad/5387571460549/asset_previews/b455aaa72d1482e171f0558c2766cd48/retina/Mars_2k_Color_Preview_v001.jpg",
+			rotate: true,
+			rotationTime: 8000,
+			keyframes: "mars"
+		});
+
+		new Sphere({
+			container: document.getElementById("moon"),
+			radius: 50,
+			polygonsPerMeridian: 12,
+			texture: "https://static-2.gumroad.com/res/gumroad/5387571460549/asset_previews/d7c3b214de778aa83aa0a0ab32eec4c1/retina/Moon_2k_Preview.jpg",
+			rotate: true,
+			rotationTime: 5000,
+			keyframes: "moon"
+		});
+
+		new Sphere({
+			container: document.getElementById("jupiter"),
+			radius: 170,
+			polygonsPerMeridian: 17,
+			texture: "https://i.pinimg.com/originals/be/ba/b4/bebab4e9768b78a4f5dc8b7a2b24daaf.jpg",
+			rotate: true,
+			rotationTime: 50000,
+			keyframes: "jupiter"
+		});
+	</script>
+</body>
+</html>
+
