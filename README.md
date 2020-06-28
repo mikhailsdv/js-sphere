@@ -1,14 +1,18 @@
 # js-sphere
 Tiny JavaScript library for creating animated 3D spheres / planets with divs (no canvas).
 
-### Usage
+### Examples
+----
+[View an example](https://mikhailsdv.github.io/js-sphere/)
 
+### Usage
+---
 1. Include the js file into your project:
-```
+```html
 <script type="text/javascript" src="js-sphere.js"></script>
 ```
 2. Call `new Sphere()` with the necessary parameters:
-```
+```javascript
 new Sphere({
  container: document.body,                   // where the sphere should be rendered
  radius: 150,                                // radius of the sphere, px
@@ -21,9 +25,9 @@ new Sphere({
 ```
 
 ### Methods
-
+---
 `js-sphere` has only one method `.setTexture(url)`. It allows you to smoothly change the texture of existing sphere without rerendering it.
-```
+```javascript
 let planet = new Sphere({
  texture: "https://example.com/earth.jpg"
 });
